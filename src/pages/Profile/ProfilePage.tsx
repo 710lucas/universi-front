@@ -15,6 +15,8 @@ import type { ProfileContextType } from '@/pages/Profile'
 import './Profile.css'
 import './card.css'
 import './section.css'
+import AllFolders from "../Capacity/Components/FolderBar/AllFolders";
+import { InfoDisplay } from "../Capacity/Components/Contents/InfoDisplay";
 
 export function ProfilePage() {
     const auth = useContext(AuthContext);
@@ -70,6 +72,11 @@ export function ProfilePage() {
                 </div>
 
                 <div id="right-side">
+
+                    
+                    <InfoDisplay/>
+                    {/* Todas pastas */}
+                    <AllFolders/>
                     <ProfileRecommendSettingsButton />
                     <ProfileCompetences
                         openCompetenceSettings={()=>{setShowCompetencesSettings(true)}}
